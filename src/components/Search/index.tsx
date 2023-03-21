@@ -19,7 +19,12 @@ export default function Search({ fetchUser }: Props) {
           onChange={event => setUserName(event.target.value)}
           onKeyDown={event => {if (event.key === "Enter") fetchUser(userName)}}
         /> 
-        <button onClick={() => fetchUser(userName)}>Procurar</button>
+        <button 
+          onClick={() => fetchUser(userName)}
+          disabled={userName.length < 1}
+        >
+          Procurar
+        </button>
       </div>
     </div>
   )

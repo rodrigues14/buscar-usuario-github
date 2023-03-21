@@ -4,4 +4,6 @@ export interface IUser {
   location: string;
   followers: number;
   following: number;
+  html_url: string;
+  bio: string
 }
