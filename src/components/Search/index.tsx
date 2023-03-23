@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { SearchStyled } from "./Search.style";
 
 interface Props {
   fetchUser: (userName: string) => Promise<void>
@@ -8,7 +9,7 @@ export default function Search({ fetchUser }: Props) {
   const [userName, setUserName] = useState("");
 
   return (
-    <div>
+    <SearchStyled>
       <h2>Digite o nome do usuário</h2>
       <div>
         <input
@@ -26,6 +27,6 @@ export default function Search({ fetchUser }: Props) {
           Procurar
         </button>
       </div>
-    </div>
+    </SearchStyled>
   )
 }
