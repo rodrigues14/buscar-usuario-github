@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colorDark, fontColor } from "../../style/variables";
+import { colorDark } from "../../style/variables";
 
 export const SearchStyled = styled.div`
   margin-top: 30px;
@@ -23,6 +23,11 @@ export const SearchStyled = styled.div`
     }
     button {
       background-color: #000;
+      cursor: pointer;
+      transition: .3s;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
     }
   }
 `;
