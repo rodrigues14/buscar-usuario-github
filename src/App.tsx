@@ -5,6 +5,7 @@ import Search from "./components/Search"
 import User from "./components/User";
 import { IRepo } from "./interfaces/IRepo";
 import { IUser } from "./interfaces/IUser";
+import { AiFillGithub } from 'react-icons/ai';
 
 
 function App() {
@@ -47,7 +48,8 @@ function App() {
         {error && <p>Usuário não encontrado</p>}
       </UserInfos>
       <Repositories>
-        {repo?.map((item, index) => <Repository key={index} {...item} />)}
+        {repo ? repo.map((item, index) => <Repository key={index} {...item} />) 
+              : <AiFillGithub className="github-icon" size={250} />}
       </Repositories>
     </Container>
   )

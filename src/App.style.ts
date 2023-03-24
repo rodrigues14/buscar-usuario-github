@@ -27,14 +27,27 @@ export const Title = styled.h1`
 `;
 
 export const Repositories = styled.section`
+  position: relative;
   background-color: ${colorDark2};
   width: 100%;
   min-height: 100vh;
   padding: 30px 40px;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 20px;
+
+  .github-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    path {
+      width: 300px;
+      fill: rgba(0, 0, 0, .2);
+    }
+  } 
+  
+
   @media (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
   } 
