@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { colorDark } from "./style/variables";
+import { colorDark, colorDark2 } from "./style/variables";
+
+export const Container = styled.main`
+  display: flex;
+  flex-direction: row;
+`;
 
 export const UserInfos = styled.div`
   max-width: 330px;
@@ -11,4 +16,10 @@ export const UserInfos = styled.div`
 
 export const Title = styled.h1`
   text-align: center;
+`;
+
+export const Repositories = styled.section`
+  background-color: ${colorDark2};
+  width: 100%;
+  min-height: 100vh;
 `;

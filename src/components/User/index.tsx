@@ -8,7 +8,7 @@ export default function User(props: IUser) {
       <UserImage src={avatar_url} alt="Imagem de perfil do usuário" />
       <h3>{login}</h3>
       <p>{location}</p>
-      <p>{bio}</p>
+      {bio && <p>{bio}</p>}
       <Social>
         <p>Seguidores: {followers}</p>
         <p>Seguindo: {following}</p>
