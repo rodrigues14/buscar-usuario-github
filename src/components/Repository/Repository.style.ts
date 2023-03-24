@@ -6,6 +6,10 @@ export const RepositoryStyled = styled.div`
   padding: 20px 30px;
   max-width: 300px;
   border-radius: 15px;
+  &:hover {
+    transition: .3s;
+    transform: scale(1.06);
+  }
   h3 {
     font-size: 18px;
     font-weight: 500;
@@ -17,18 +21,14 @@ export const RepositoryStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
     svg path {
-      margin-top: 5px;
       fill: #ff0;
     }
   }
-  a {
-    margin-top: 10px;
-    display: block;
-  }
   @media (max-width: 870px) {
     min-width: 100%;
-  } 
+  }
 `;
 
 export const Stars = styled.p`
