@@ -1,4 +1,4 @@
-import { IUser } from "../../interfaces/user";
+import { IUser } from "../../interfaces/IUser";
 import { Social, UserImage, UserStyled } from "./User.style";
 
 export default function User(props: IUser) {

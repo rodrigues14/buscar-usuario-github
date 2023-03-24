@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colorBlueLight } from "../../style/variables";
 
 export const UserStyled = styled.div`
   margin-top: 40px;
@@ -10,6 +11,7 @@ export const UserStyled = styled.div`
     font-size: 20px;
     font-weight: 500;
     margin: 20px 0;
+    color: ${colorBlueLight};
   }
   > p {
     margin: 10px 0;

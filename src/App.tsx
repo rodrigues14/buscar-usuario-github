@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { Container, Title, UserInfos, Repositories } from "./App.style";
+import Repository from "./components/Repository";
 import Search from "./components/Search"
 import User from "./components/User";
 import { IRepo } from "./interfaces/IRepo";
-import { IUser } from "./interfaces/user";
+import { IUser } from "./interfaces/IUser";
 
 
 function App() {
@@ -22,7 +23,6 @@ function App() {
     const responseRepo = await fetch(`https://api.github.com/users/${userName}/repos`);
 
     const [dataUser, dataRepo] = await Promise.all([responseUser.json(), responseRepo.json()]);
-
     setLoading(false);
     if (responseUser.status === 404 || responseRepo.status === 404) return setError(true);
 
@@ -31,10 +31,10 @@ function App() {
     setUser(userData)
 
     const repoData: IRepo[] = dataRepo.map((repo: any) => {
-      const { name, language, stargazers_count } = repo;
-      return { name, language, stargazers_count };
+      const { name, language, stargazers_count, html_url } = repo;
+      return { name, language, stargazers_count, html_url };
     });
-    setRepo(repoData);
+    setRepo(repoData);    
   }
 
   return (
@@ -47,7 +47,7 @@ function App() {
         {error && <p>Usuário não encontrado</p>}
       </UserInfos>
       <Repositories>
-        {repo?.map(item => <p>{item.name}</p>)}
+        {repo?.map((item, index) => <Repository key={index} {...item} />)}
       </Repositories>
     </Container>
   )
