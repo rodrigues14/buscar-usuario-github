@@ -1,7 +1,7 @@
 # Buscar-usuário-Github
 
 ## 📋 Sobre
-Acesse o projeto através deste link: [Buscar-usuário-Github]()  
+Acesse o projeto através deste link: [Ver projeto](https://buscar-usuario-github.vercel.app/)  
   
 Este projeto consiste em um buscador de usuários do Github. Ao inserir o username no input, a aplicação faz uma chamada na API do Github para buscar as informações solicitadas e as renderiza na tela, junto com os seus respectivos reposítorios.
 
@@ -23,4 +23,3 @@ Este projeto foi desenvolvido usando as seguintes tecnologias:
 ## 👨‍💻 Autor
 
 Este projeto foi desenvolvido por Lucas Rodrigues. Você pode entrar em contato comigo através do meu [LinkedIn](https://www.linkedin.com/in/lucas-rodrigues-perfil/).
- 
