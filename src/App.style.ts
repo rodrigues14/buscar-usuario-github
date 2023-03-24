@@ -42,3 +42,22 @@ export const Repositories = styled.section`
     grid-template-columns: repeat(1, 1fr);
   } 
 `;
+
+export const Loarder = styled.div`
+  display: block;
+  margin-inline: auto;
+  margin-top: 20px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border-top: 3px solid rgba(255, 255, 255, 1);
+  border-left: 3px solid rgba(255, 255, 255, 1);
+  border-right: 3px solid rgba(255, 255, 255, 0);
+  animation: spin 1s infinite linear;
+  @keyframes spin{
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
+

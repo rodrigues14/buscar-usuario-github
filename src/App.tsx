@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Container, Title, UserInfos, Repositories } from "./App.style";
+import { Container, Title, UserInfos, Repositories, Loarder } from "./App.style";
 import Repository from "./components/Repository";
 import Search from "./components/Search"
 import User from "./components/User";
@@ -43,7 +43,7 @@ function App() {
         <Title>Encontre usuários do Github</Title>
         <Search fetchUser={fetchUser} />
         {user && <User {...user} />}
-        {loading && <p>Carregando...</p>}
+        {loading && <Loarder />}
         {error && <p>Usuário não encontrado</p>}
       </UserInfos>
       <Repositories>
