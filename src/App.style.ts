@@ -24,6 +24,9 @@ export const UserInfos = styled.div`
 export const Title = styled.h1`
   text-align: center;
   color: ${colorBlueLight};
+  @media (max-width: 480px) {
+    font-size: 22px;
+  }
 `;
 
 export const Repositories = styled.section`
@@ -35,7 +38,6 @@ export const Repositories = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px 20px;
-
   .github-icon {
     position: absolute;
     top: 50%;
@@ -46,13 +48,14 @@ export const Repositories = styled.section`
       fill: rgba(0, 0, 0, .2);
     }
   } 
-  
-
   @media (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
   } 
   @media (max-width: 870px) {
     grid-template-columns: repeat(1, 1fr);
+  } 
+  @media (max-width: 600px) {
+    min-height: calc(100vh - 254px);
   } 
 `;
 
